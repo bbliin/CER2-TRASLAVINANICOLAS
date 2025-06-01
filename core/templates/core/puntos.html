@@ -1,0 +1,18 @@
+{%extends 'core/base.html'%}
+{% block contenido %}
+<hr>
+<h1 class="display-4 subtitulo">Puntos en la V Region</h1>
+<hr>
+    {% for lugar in puntos %}
+  <div class="card shadow-sm mb-3 mx-auto" style="max-width: 1000px;">
+    <div class="card-header bg-primary text-white bg-success">
+      <h5 class="mb-0"> {{ lugar.nombre }}</h5>
+    </div>
+    <div class="card-body">
+      <p class="mb-1"><strong>Dirección:</strong> {{ lugar.direccion }}</p>
+      <p class="mb-1"><strong>Ciudad:</strong> {{ lugar.ciudad }}</p>
+      <p class="mb-1"><strong>Región:</strong> {{ lugar.region }}</p>
+    </div>
+  </div>
+{% endfor %}
+{% endblock%}

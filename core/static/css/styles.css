@@ -1,0 +1,54 @@
+
+body{
+    background-image: url(../images/verde.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+button{
+  background-color:#345734;
+}
+.subtitulo{
+   text-align: center;
+}
+
+.justificar{
+    text-align: justify;
+}
+
+.carousel-inner img {
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-pequeno {
+  height: 500px;
+  max-width: 800px;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+.carousel-pequeno img {
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.carousel-fino {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.carousel-fino img {
+  height: 400px;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+nav{
+    background-color:#345734;
+}
+
+

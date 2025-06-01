@@ -1,0 +1,40 @@
+{%extends 'core/base.html'%}
+{% load static %}
+
+
+{% block contenido %}
+<hr>
+  <h1 class="display-4 subtitulo">Inicio</h1>
+  <hr>
+{% if request.user.is_authenticated %}
+<h6 class="display-6 subtitulo">Bienvenido de nuevo, {{user.username | upper}}</h6>
+{%endif%}
+
+<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner carousel-pequeno">
+    <div class="carousel-item active">
+      <img src="{% static 'images/reciclaje.jpeg' %}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/reciclaje2.jpeg' %}" class="d-block w-100" alt="...">
+    </div>
+</div>
+
+<div class="card mx-auto p-4" style="width: 50rem;">
+  <div class="card-body">
+    <h5 class="card-title">Bienvenidos al Portal de Reciclaje de la Municipalidad</h5>
+    <p class="card-text justificar">El Departamento de Medioambiente pone a disposición 
+                        de la comunidad una nueva plataforma digital para facilitar y modernizar la gestión del reciclaje. 
+                        A través de este sitio, los vecinos podrán registrar solicitudes de retiro de reciclables o residuos voluminosos 
+                        sin necesidad de acudir presencialmente a nuestras oficinas.
+                        Esta herramienta también permite a nuestros operarios organizar y gestionar los retiros, 
+                        y al personal administrativo acceder a métricas actualizadas y mantener la información al día, promoviendo así una gestión más eficiente y sustentable.
+
+¡Con tu colaboración, avanzamos hacia una ciudad más limpia y responsable con el medioambiente!
+
+</p>
+    <a href="{% url 'login' %}" class="card-link">Inicia Sesión aqui!</a>
+    <a href="{% url 'register' %}" class="card-link">¿No tienes cuenta? Registrate aquí!!</a>
+  </div>
+</div>
+{% endblock%}
